@@ -184,7 +184,7 @@ def main(argv=None):
     elif FLAGS.mode == "visualize":
         saver = tf.train.Saver()
         # print_tensors_in_checkpoint_file(file_name='logs/model.ckpt-5500', tensor_name='', all_tensors=False)
-        saver.restore(sess, 'logs/model.ckpt-17000')
+        saver.restore(sess, 'logs/model.ckpt-77500')
         valid_images, valid_annotations = validation_dataset_reader.get_random_batch(
             FLAGS.batch_size)
         t1 = time.time()

@@ -49,7 +49,7 @@ class BatchDatset:
             resize_image = misc.imresize(image, resize_size, interp='nearest')
         else:
             resize_image = image
-        if len(resize_image) == 3:
+        if len(resize_image.shape) == 3 and resize_image.shape[2] == 3:
             resize_image = resize_image[:, :, ::-1]
         return np.array(resize_image)
 
